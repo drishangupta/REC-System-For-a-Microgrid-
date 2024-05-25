@@ -1,0 +1,485 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative; /* Make sure the container is positioned relative */
+}
+
+header {
+    background: #f4f4f4;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.login-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px 0;
+}
+
+#nav-links {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+
+    #nav-links li a {
+        padding: 10px 20px;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+.show {
+    display: flex !important;
+}
+
+/* Hero Section Styles */
+#home {
+    position: relative;
+    background: url('Resources/hero-image.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-down {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+#green-energy-vs-carbon-credits, #facts, #how-it-works {
+    padding: 60px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comparison-item, .fact-item, .step {
+    width: 45%;
+}
+
+.comparison-item h3, .fact-item h3, .step h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-links, .contact-info, .newsletter {
+    margin-bottom: 20px;
+}
+
+.footer-links a, .contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .comparison, .facts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comparison-item, .fact-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        margin: 5px;
+    }
+}
+/* About Us Page Styles */
+#about-us {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about-us h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+#about-us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.2em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .team-member {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    #about-us h1 {
+        font-size: 2em;
+    }
+
+    #about-us p {
+        font-size: 1em;
+    }
+
+    #about-us h2 {
+        font-size: 1.5em;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .team-member img {
+        width: 80%;
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.login-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px 0;
+}
+
+#nav-links {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #f4f4f4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+
+    #nav-links li a {
+        padding: 10px 20px;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Show class for toggling the menu */
+.show {
+    display: flex !important;
+}
+.scroll-down {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
