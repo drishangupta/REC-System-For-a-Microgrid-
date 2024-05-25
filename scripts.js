@@ -1,24 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
+document.getElementById("menu-icon").addEventListener("click", function() {
+    var navLinks = document.getElementById("nav-links");
+    if (navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+    } else {
+        navLinks.classList.add("show");
+    }
+});
 
-    menuIcon.addEventListener('click', function() {
-        navLinks.classList.toggle('show');
-    });
+window.addEventListener("scroll", function() {
+    var hero = document.getElementById("hero");
+    var offset = window.pageYOffset;
+    hero.style.backgroundPositionY = offset * 0.5 + "px";
+});
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+document.querySelector('.scroll-down').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#how-it-works').scrollIntoView({ behavior: 'smooth' });
+});
 
-            const target = document.querySelector(this.getAttribute('href'));
-
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+document.getElementById("connectButton").addEventListener("click", async () => {
+    if (typeof window.ethereum !== 'undefined') {
+        try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            console.log('Connected to Metamask');
+        } catch (error) {
+            console.error('User rejected the request.');
+        }
+    } else {
+        alert('Metamask is not installed. Please install it to use this feature.');
+    }
 });

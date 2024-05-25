@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
- 
       <div class="container">
         <img src="Resources/logo.jpg" alt="Company Logo" class="logo" />
         <nav>
@@ -24,38 +23,10 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#blogs">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#login" class="login-button">Login</a></li>
+            <button id="connectButton">Connect Metamask</button>
           </ul>
         </nav>
       </div>
-    </header>
-
-    <section id="hero">
-      <section id="home">
-        <div class="hero-overlay"></div>
-
- 
-        <div class="container">
-            <img src="Resources/logo.jpg" alt="Company Logo" class="logo" />
-            <nav>
-                <div class="menu-icon" id="menu-icon">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <ul id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="index.html" target="_self"
-                        ><button
-                              id="connectButton">connect metamask</button></a></li>
-                </ul>
-            </nav>
-        </div>
     </header>
 
     <!-- Parent container with shared background image -->
@@ -85,6 +56,7 @@
     
     <div class="shared-background1">
         <section id="green-energy-vs-carbon-credits">
+            <div class="section-overlay"></div> <!-- Added overlay -->
             <div class="container">
                 <h2>Green Energy Points vs. Carbon Credits</h2>
                 <div class="comparison">
@@ -109,6 +81,7 @@
         </section>
 
         <section id="facts">
+            <div class="section-overlay"></div> <!-- Added overlay -->
             <div class="container">
                 <h2>Why Green Energy Matters</h2>
                 <div class="facts">
@@ -173,10 +146,8 @@
         </div>
     </footer>
 
-    
     <script src="scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
-
     <script src="app.js"></script>
 </body>
 </html>
