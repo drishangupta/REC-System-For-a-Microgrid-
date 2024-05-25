@@ -5,14 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     menuIcon.addEventListener('click', function() {
         navLinks.classList.toggle('show');
     });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const navLinks = document.getElementById('nav-links');
-
-    menuIcon.addEventListener('click', function() {
-        navLinks.classList.toggle('show');
-    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
