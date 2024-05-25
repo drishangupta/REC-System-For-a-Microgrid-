@@ -20,8 +20,9 @@ header {
     align-items: center;
 }
 
-.logo {
-    width: 150px;
+.logo{
+    width: 50px;
+    border-radius: 50%;
 }
 
 nav {
@@ -64,9 +65,14 @@ nav ul li a {
     background: #333;
     margin: 4px 0;
 }
-
+.logo{
+    width: 50px;
+    border-radius: 50%;
+}
 #nav-links {
     display: flex;
+    position: relative;
+    top: -30px;
 }
 
 @media (max-width: 768px) {
@@ -116,8 +122,18 @@ nav ul li a {
     color: white;
     text-align: center;
     padding: 100px 20px;
+    height: 100vh;
+    width: 100vw;
 }
-
+#home4 {
+    position: relative;
+    background: url('Resources/hero-image.jpeg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 70vh;
+    width: 100vw;
+}
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -164,7 +180,7 @@ nav ul li a {
 }
 
 #green-energy-vs-carbon-credits, #facts, #how-it-works {
-    padding: 60px 0;
+    padding:  0;
     text-align: center;
 }
 
@@ -176,6 +192,8 @@ h2 {
 .comparison {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    font-size: larger;
 }
 
 .comparison-item, .fact-item, .step {
@@ -187,12 +205,25 @@ h2 {
     margin-bottom: 20px;
 }
 
+
 footer {
     background: #333;
     color: white;
     padding: 40px 0;
+   
 }
+footer .container{
+    display: flex;
+    justify-content: space-evenly;
 
+}
+.footer-links{
+    position: relative;
+    top: 15px;
+    display: flex;
+    gap: 35px;
+
+}
 .footer-links, .contact-info, .newsletter {
     margin-bottom: 20px;
 }
@@ -205,6 +236,8 @@ footer {
 .social-media img {
     width: 30px;
     margin-right: 10px;
+    mix-blend-mode: screen;
+    
 }
 
 .newsletter input {
@@ -437,6 +470,57 @@ footer {
     .team-member img {
         width: 80%;
     }
+}
+/* why green energy matters */
+
+#home2 {
+    position: relative;
+    background: url('Resources/bg2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: left;
+    padding: 100px 20px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.facts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+#home2 .container {
+    position: relative;
+    z-index: 2;
+}
+
+#home3 {
+    position: relative;
+    background: url('Resources/bg3.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: left;
+    padding: 100px 20px;
+    height: 90vh;
+    width: 100vw;
+}
+
+.green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+#home3 .container {
+    position: relative;
+    z-index: 2;
 }
 /* General Styles */
 body {
