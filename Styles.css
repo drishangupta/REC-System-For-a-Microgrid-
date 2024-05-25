@@ -283,6 +283,82 @@ footer {
         margin: 5px;
     }
 }
+/* Section Styles */
+#our-idea {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+#our-idea .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#our-idea h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+#our-idea .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#our-idea .text {
+    flex: 1;
+    margin: 20px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #555;
+}
+
+#our-idea .graphic {
+    flex: 1;
+    margin: 20px;
+}
+
+#our-idea .graphic img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #our-idea h2 {
+        font-size: 2em;
+    }
+
+    #our-idea .text, #our-idea .graphic {
+        flex: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #our-idea h2 {
+        font-size: 1.8em;
+    }
+
+    #our-idea .text {
+        font-size: 1em;
+    }
+}
+
 /* About Us Page Styles */
 #about-us {
     padding: 60px 0;
