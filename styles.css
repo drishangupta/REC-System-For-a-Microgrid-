@@ -11,37 +11,7 @@ body {
     margin: 0 auto;
     position: relative;
 }
-/* CSS for making buttons larger and centered */
-button#sellerButton,
-button.view-listings-button {
-    padding: 20px 40px;
-    font-size: 18px;
-    background-color: #2ea33c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-button#sellerButton:hover,
-button.view-listings-button:hover {
-    background-color: #575757;
-}
-
-/* Centering the buttons */
-#hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-}
-
-#hero button {
-    margin: 10px;
-}
 /* Header Styles */
 /* header {
     background: rgb(45,44,59);
@@ -448,11 +418,10 @@ nav {
 
 /* How It Works Section Styles */
 #how-it-works {
-    
+    background: #f9f9f9;
     padding: 60px 20px;
     text-align: center;
-    background:url(/REC-System-For-a-Microgrid-/Resources/HIW.jpg);
-    opacity: 95%;
+    background:url(/Resources/HIW.jpg);
 }
 
 #how-it-works .steps {
@@ -463,8 +432,6 @@ nav {
 
 /* Container and steps styling */
 #how-it-works .steps {
-    color: rgb(234, 202, 142);
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -472,7 +439,6 @@ nav {
 
 #how-it-works .step {
     background: #fff;
-    opacity: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
