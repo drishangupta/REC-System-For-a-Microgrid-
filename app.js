@@ -1,3 +1,4 @@
+function final(){
 window.addEventListener('load', async () => {
     // Modern dapp browsers...
     if (window.ethereum) {
@@ -45,5 +46,6 @@ window.addEventListener('load', async () => {
     const accounts = await ethereum.request({ method: 'eth_accounts' });
     console.log(accounts[0]);
   }
+}
 
   getAccount();

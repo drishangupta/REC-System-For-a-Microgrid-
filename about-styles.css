@@ -34,8 +34,8 @@ header .container {
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
 }
 
@@ -70,7 +70,7 @@ nav {
 }
 
 .login-button {
-    background: #77aaff;
+    background: #20e357;
     border-radius: 5px;
 }
 
@@ -221,4 +221,51 @@ footer {
     .team-member {
         flex: 1 0 80%;
     }
+}
+/* CSS for Values Section */
+.values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.value-box {
+    padding: 80px 100px;
+    opacity: .4;
+    background-color: #e8ece7;
+    
+    opacity: 1.0;
+    border-radius: 5px;
+    margin: 10px;
+}
+header {
+    /* Keep existing styles */
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+footer {
+    /* Keep existing styles */
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.gbfor-all {
+    /* Keep existing styles */
+    background: rgb(57, 19, 19);
+    z-index: 2; /* Lower z-index to ensure overlay appears behind header and footer */
+}
+
+.container {
+    /* Keep existing styles */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }

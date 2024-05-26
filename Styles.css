@@ -13,7 +13,7 @@ body {
 }
 
 /* Header Styles */
-header {
+/* header {
     background: rgb(45,44,59);
     background: linear-gradient(90deg, rgba(45,44,59,1) 3%, rgba(86,176,113,1) 5%, rgba(42,64,49,1) 99%);
     padding: 10px 0;
@@ -58,12 +58,12 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-}
+}*/
 
 #connectButton {
     margin-left: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #24ad12;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -75,7 +75,7 @@ nav ul li a {
     background-color: #0056b3;
 }
 
-
+/*
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -92,7 +92,57 @@ nav ul li a {
 #nav-links {
     display: flex;
     align-items: center;
+} */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
 }
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+nav {
+    flex: 1;
+}
+
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nav-links li {
+    margin-left: 20px;
+}
+
+#nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+#nav-links a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
 
 @media (max-width: 768px) {
     header .container {
@@ -668,4 +718,61 @@ section {
 
 .newsletter button:hover {
     background-color: #0056b3;
+}
+/* CSS for Listings Modal */
+#listingsModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+#listingsModal .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#listingsModal th, #listingsModal td {
+    padding: 10px;
+}
+
+#listingsModal th {
+    background-color: #f2f2f2;
+}
+
+#listingsModal tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#listingsModal tbody tr:hover {
+    background-color: #ddd;
+}
+
+#listingsModal th, #listingsModal td {
+    border: 1px solid #ddd;
+}
+
+#listingsModal th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#listingsModal tbody td {
+    vertical-align: middle;
+}
+
+#listingsModal tbody tr:last-child td {
+    border-bottom: none;
 }
