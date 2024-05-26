@@ -719,7 +719,6 @@ section {
 .newsletter button:hover {
     background-color: #0056b3;
 }
-<<<<<<< HEAD:Styles.css
 /* CSS for Listings Modal */
 #listingsModal {
     display: none;
@@ -777,5 +776,3 @@ section {
 #listingsModal tbody tr:last-child td {
     border-bottom: none;
 }
-=======
->>>>>>> 5b480a7777a0942226c644a9f1b190037bdf4d9a:styles.css
