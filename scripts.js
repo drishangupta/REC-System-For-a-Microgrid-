@@ -10,44 +10,44 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Metamask connection script
-async function connectMetamask() {
-    if (window.ethereum) {
-        try {
-            // Request account access if needed
-            await ethereum.request({ method: 'eth_requestAccounts' });
-            console.log('Connected to Metamask');
-        } catch (error) {
-            console.error('User rejected the connection request');
-        }
-    } else {
-        console.error('Metamask is not installed');
-    }
-}
+// async function connectMetamask() {
+//     if (window.ethereum) {
+//         try {
+//             // Request account access if needed
+//             await ethereum.request({ method: 'eth_requestAccounts' });
+//             console.log('Connected to Metamask');
+//         } catch (error) {
+//             console.error('User rejected the connection request');
+//         }
+//     } else {
+//         console.error('Metamask is not installed');
+//     }
+// }
 
-document.getElementById('connectButton').addEventListener('click', connectMetamask);
-window.addEventListener('load', async () => {
-    // Modern dapp browsers...
-    if (window.ethereum) {
-      window.web3 = new Web3(ethereum);
-      try {
-        // Request account access if needed
-        await ethereum.request({ method: 'eth_requestAccounts' });
-        // Acccounts now exposed
-        console.log("MetaMask is connected");
-      } catch (error) {
-        console.error("User denied account access");
-      }
-    }
-    // Legacy dapp browsers...
-    else if (window.web3) {
-      window.web3 = new Web3(web3.currentProvider);
-      console.log("MetaMask is connected");
-    }
-    // Non-dapp browsers...
-    else {
-      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
-    }
-  });
+// document.getElementById('connectButton').addEventListener('click', connectMetamask);
+// window.addEventListener('load', async () => {
+//     // Modern dapp browsers...
+//     if (window.ethereum) {
+//       window.web3 = new Web3(ethereum);
+//       try {
+//         // Request account access if needed
+//         await ethereum.request({ method: 'eth_requestAccounts' });
+//         // Acccounts now exposed
+//         console.log("MetaMask is connected");
+//       } catch (error) {
+//         console.error("User denied account access");
+//       }
+//     }
+//     // Legacy dapp browsers...
+//     else if (window.web3) {
+//       window.web3 = new Web3(web3.currentProvider);
+//       console.log("MetaMask is connected");
+//     }
+//     // Non-dapp browsers...
+//     else {
+//       console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+//     }
+//   });
 
 
 
@@ -74,3 +74,28 @@ window.addEventListener('load', async () => {
   }
 
   getAccount();
+  document.addEventListener('DOMContentLoaded', function () {
+    var sellerButton = document.getElementById('sellerButton');
+    var sellerModal = document.getElementById('sellerModal');
+    var closeBtn = document.querySelector('.modal .close');
+
+    // Open the modal when the Seller button is clicked
+    sellerButton.addEventListener('click', function () {
+        sellerModal.style.display = 'block';
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function () {
+        sellerModal.style.display = 'none';
+    });
+
+    // Close the modal when clicking outside the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target === sellerModal) {
+            sellerModal.style.display = 'none';
+        }
+    });
+});
+
+
+
